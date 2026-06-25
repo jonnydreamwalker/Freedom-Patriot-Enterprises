@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Remodeling - Freedom Patriot Enterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero-header {
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.8)), url('https://picsum.photos/id/251/2000/800');
+            background-size: cover;
+            background-position: center;
+            height: 420px;
+        }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-black/95 backdrop-blur-md border-b border-zinc-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="../logo.png" alt="Freedom Patriot Enterprises" class="h-14 w-auto">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-lg">
+                <a href="../index.html" class="hover:text-amber-400 transition">Home</a>
+                <a href="remodeling.html" class="text-amber-400 font-semibold">Residential Remodeling</a>
+            </div>
+
+            <div class="flex items-center gap-6 text-sm">
+                <a href="tel:850-XXX-XXXX" class="hidden sm:flex items-center gap-2 hover:text-amber-400">
+                    <i class="fa-solid fa-phone"></i> (850) XXX-XXXX
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Photo Header -->
+    <header class="hero-header flex items-center justify-center text-center">
+        <div>
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight">Residential Remodeling</h1>
+            <p class="text-xl text-amber-300 mt-3">Kitchens • Bathrooms • Additions • Full Home Transformations</p>
+        </div>
+    </header>
+
+    <section class="py-20 bg-zinc-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Remodeling Services</h2>
+            
+            <div class="space-y-8">
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full px-8 py-7 text-left flex justify-between items-center hover:bg-zinc-700">
+                        <span class="text-2xl font-semibold">Kitchen Remodeling</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content px-8 pb-8">
+                        <img src="https://picsum.photos/id/201/800/500" class="rounded-2xl mb-6" alt="Kitchen Remodel">
+                        <p class="text-zinc-300">Complete kitchen renovations with custom cabinets, countertops, and modern finishes.</p>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full px-8 py-7 text-left flex justify-between items-center hover:bg-zinc-700">
+                        <span class="text-2xl font-semibold">Bathroom Remodeling</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content px-8 pb-8">
+                        <img src="https://picsum.photos/id/251/800/500" class="rounded-2xl mb-6" alt="Bathroom Remodel">
+                        <p class="text-zinc-300">Luxury bathrooms, showers, vanities, and tile work.</p>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full px-8 py-7 text-left flex justify-between items-center hover:bg-zinc-700">
+                        <span class="text-2xl font-semibold">Home Additions & Renovations</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content px-8 pb-8">
+                        <img src="https://picsum.photos/id/180/800/500" class="rounded-2xl mb-6" alt="Home Addition">
+                        <p class="text-zinc-300">Room additions, exterior siding, windows, and full home transformations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-950 py-12 text-center text-zinc-500">
+        © 2026 Freedom Patriot Enterprises • DeFuniak Springs, FL
+    </footer>
+
+    <script>
+        function toggleAccordion(btn) {
+            const content = btn.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+</body>
+</html>
